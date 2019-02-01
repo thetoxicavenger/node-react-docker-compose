@@ -1,5 +1,14 @@
 version: '2'
 services:
+  db:
+    image: postgres:latest
+    restart: always
+    volumes:
+      - ./db/init.pgsql:/docker-entrypoint-initdb.d/init.pgsql 
+    # environment:
+    #   POSTGRES_PASSWORD: example
+    # ports:
+    #   - 5999:5999
   server:
     build:
       context: ./server/
