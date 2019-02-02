@@ -11,13 +11,13 @@ create table users(
 insert into users(first_name, last_name, email)
 values ('Mitch', 'Cravens', 'mcravens12@gmail.com');
 
--- create table posts(
---     id bigserial primary key, 
---     author_id serial, 
---     title text, 
---     blurb text, 
---     created_at timestamptz, 
---     updated_at timestamptz,
---     img_url: text, 
---     body text
--- );
+create table posts(
+    id bigserial primary key, 
+    author_id serial, 
+    title text, 
+    blurb text, 
+    created_at timestamptz, 
+    updated_at timestamptz,
+    img_url text, 
+    body text
+);
